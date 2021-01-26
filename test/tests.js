@@ -41,3 +41,11 @@ test('take a date and diff and return a new date with diff added to the original
 
     expect.equal(actual, expected)
 });
+
+test('take a date and diff and return a new date with diff added to the original date - months', (expect) => {
+    const expected = 'The new date is Fri Jun 25 2021 04:00:00 GMT-0700 (Pacific Daylight Time)'
+
+    const actual = add('Mon Jan 25 2021 04:00:00 GMT-0800', '5M')
+
+    expect.equal(actual, expected)
+});
