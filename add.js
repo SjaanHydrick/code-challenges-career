@@ -7,10 +7,10 @@ export function add(date, diff) {
     let seconds = formatDate.getSeconds();
     let minutes = formatDate.getMinutes();
     let hours = formatDate.getHours();
-    // let days = 0;
-    // let weeks = 0;
-    // let months = 0;
-    // let years = 0;
+    let days = formatDate.getDate();
+    // let weeks = formatDate.getWeek();
+    let months = formatDate.getMonth();
+    let years = formatDate.getFullYear();
 
     if (diff.includes('s')) {
         formatDate.setSeconds(seconds + diffNum);
@@ -21,33 +21,22 @@ export function add(date, diff) {
     }
     
     if (diff.includes('h')) {
-        console.log(formatDate)
-        console.log(diffNum)
-        console.log(hours)
         formatDate.setHours(hours + diffNum);
     }
     
-    // if(diff.includes('d')) {
-    //     newDiff = diff.slice(0, -1);
-    //     diffNum = parseInt(newDiff);
-    //     days = date.getDay() + diffNum
-    // }
+    if(diff.includes('d')) {
+        formatDate.setDate(days + diffNum);
+    }
     
     // if(diff.includes('w')) {
-    //     newDiff = diff.slice(0, -1);
-    //     diffNum = parseInt(newDiff);
     //     weeks = date.getWeek() + diffNum
     // }
 
     // if(diff.includes('m')) {
-    //     newDiff = diff.slice(0, -1);
-    //     diffNum = parseInt(newDiff);
     //     months = date.getMonth() + diffNum
     // }
     
     // if(diff.includes('y')) {
-    //     newDiff = diff.slice(0, -1);
-    //     diffNum = parseInt(newDiff);
     //     years = date.getFullYear() + diffNum
     // }
 
