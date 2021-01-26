@@ -23,7 +23,7 @@ export function add(date, diff) {
         formatDate.setHours(hours + diffNum);
     }
     
-    if(diff.includes('d')) {
+    if (diff.includes('d')) {
         formatDate.setDate(days + diffNum);
     }
     
@@ -31,9 +31,9 @@ export function add(date, diff) {
         formatDate.setDate(days + (diffNum * 7))
     }
 
-    // if(diff.includes('m')) {
-    //     months = date.getMonth() + diffNum
-    // }
+    if(diff.includes('M')) {
+        formatDate.setMonth(months + diffNum)
+    }
     
     // if(diff.includes('y')) {
     //     years = date.getFullYear() + diffNum
