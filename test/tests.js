@@ -51,7 +51,7 @@ test('take a date and diff and return a new date with diff added to the original
 });
 
 test('take a date and diff and return a new date with diff added to the original date - years', (expect) => {
-    const expected = 'The new date is Thur Jan 25 2024 04:00:00 GMT-0800 (Pacific Standard Time)'
+    const expected = 'The new date is Thu Jan 25 2024 04:00:00 GMT-0800 (Pacific Standard Time)'
 
     const actual = add('Mon Jan 25 2021 04:00:00 GMT-0800', '3y')
 

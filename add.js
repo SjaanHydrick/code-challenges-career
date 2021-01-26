@@ -35,9 +35,9 @@ export function add(date, diff) {
         formatDate.setMonth(months + diffNum)
     }
     
-    // if(diff.includes('y')) {
-    //     years = date.getFullYear() + diffNum
-    // }
+    if(diff.includes('y')) {
+        formatDate.setFullYear(years + diffNum)
+    }
 
     return 'The new date is ' + formatDate;
 };
