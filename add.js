@@ -5,7 +5,7 @@ export function add(date, diff) {
     let diffNum = parseInt(newDiff);
 
     let seconds = formatDate.getSeconds();
-    // let minutes = 0;
+    let minutes = formatDate.getMinutes();
     // let hours = 0;
     // let days = 0;
     // let weeks = 0;
@@ -16,11 +16,9 @@ export function add(date, diff) {
         formatDate.setSeconds(seconds + diffNum);
     }
 
-    // if (diff.includes('m')) {
-    //     newDiff = diff.slice(0, -1);
-    //     diffNum = parseInt(newDiff);
-    //     minutes = date.getMinutes() + diffNum;
-    // }
+    if (diff.includes('m')) {
+        formatDate.setMinutes(minutes + diffNum);
+    }
     
     // if (diff.includes('h')) {
         // newDiff = diff.slice(0, -1);
