@@ -8,7 +8,6 @@ export function add(date, diff) {
     let minutes = formatDate.getMinutes();
     let hours = formatDate.getHours();
     let days = formatDate.getDate();
-    // let weeks = formatDate.getWeek();
     let months = formatDate.getMonth();
     let years = formatDate.getFullYear();
 
@@ -28,9 +27,9 @@ export function add(date, diff) {
         formatDate.setDate(days + diffNum);
     }
     
-    // if(diff.includes('w')) {
-    //     weeks = date.getWeek() + diffNum
-    // }
+    if(diff.includes('w')) {
+        formatDate.setDate(days + (diffNum * 7))
+    }
 
     // if(diff.includes('m')) {
     //     months = date.getMonth() + diffNum
